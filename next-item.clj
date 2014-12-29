@@ -30,5 +30,5 @@
 (next-item [:a, :b, :c] :d)
 (next-item [:a, :b, :c] :c)
 
-((next-item "testing" \t) \e)
-((next-item "testing" "t") "e")
+(next-item "testing" \t)
+(next-item "testing" "t")

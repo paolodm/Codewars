@@ -1,8 +1,23 @@
-(ns test)
+(ns lazy-next)
 
-  (def arr [1 2 3])
+(defn next-item
+  "Returns the value that comes after item in xs or nil"
+  ([xs item]
+  (second (drop-while (complement #{item}) xs))))
 
-  (rest arr)
-  (first arr)
 
-  (count arr)
+; ((next-item "testing" \t) \e)
+; ((next-item "testing" "t") "e")
+
+(next-item (range 1 25) 12)
+
+(next-item "testing" \t)
+
+
+(def arr (range 1 25))
+
+((complement #{4}) 6)
+
+(complement #{arr})
+
+((complement #{(range 1 5)}) 3)
