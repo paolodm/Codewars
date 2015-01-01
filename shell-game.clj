@@ -6,16 +6,10 @@
 
   (reduce (fn [last-move current] (
 
-                              (println "results: " :last-move last-move :current current)
-
-                              (println (second last-move) (first current))
-
-                              current
-
-                              ;(if (= (second last-move) (first current))
-                              ;  current
-                              ;  last-move
-                              ;)
+                              (if (= (second last-move) (first current))
+                                current
+                                last-move
+                              )
             ))
             [0 start]
             moves)
